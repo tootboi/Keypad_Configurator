@@ -1,0 +1,116 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(600px, 1fr));
+}
+
+svg {
+    height: 100%;
+    width: auto;
+}
+
+#configure {
+    display: flex;
+    margin: auto;
+}
+
+#keypad {
+    height: 600px;
+}
+
+#detail {
+    margin-left: 20px;
+    border: 2px black solid;
+}
+
+.components {
+    cursor: pointer;
+}
+
+#subLayerTabContainer {
+    float: right;
+}
+
+#name {
+    width: 500px;
+}
+
+.selected {
+    border: 1px black solid;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.colorPicker {
+    width: fit-content;
+}
+
+#rgbValues {
+    margin-left: 60px;
+}
+
+#options {
+    margin: auto;
+}
+
+.tab {
+    margin-top: 10px;
+}
+
+.tab > span {
+    padding: 10px;
+    padding-bottom: 0;
+    border: 1px black solid;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    cursor: pointer;
+}
+
+span.active {
+    background-color: gray;
+    border-bottom: none;
+}
+
+#optionContainer {
+    height: 700px;
+    width: 800px;
+    border: 2px black solid;
+}
+
+.optionTile {
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border: 1px black solid;
+    text-align: center;
+    cursor: pointer;
+}
+
+.optionTile > span {
+    display: inline-flex;
+    height: 47px;
+    align-items: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.fileBtn {
+    border: 1px solid #ccc;
+    display: inline-block;
+    cursor: pointer;
+}
