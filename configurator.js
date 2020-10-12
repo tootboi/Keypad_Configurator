@@ -1045,6 +1045,7 @@ for(layer in localData.comp) {
     layerIndex++;
 }
 loadOptions();
+loadLeds();
 
 //load options
 function loadOptions() {
@@ -1052,7 +1053,7 @@ function loadOptions() {
     $(`#${currentOption}`).toggleClass('active');
     $('#optionContainer').empty();
     initialData.options[currentOption].forEach(option => 
-        $('#optionContainer').append(`<div class="optionTile"><span>${option}</span></div>`)
+        $('#optionContainer').append(`<div class="optionTile">${option}</div>`)
     );
     optionClicked();
 }
@@ -1064,6 +1065,8 @@ $('.layerTab').click(function() {
         $('.layerTab.active').toggleClass('active');
         $(`#${id}`).toggleClass('active');
         currentLayer = id;
+        //reload leds
+        loadLeds();
     }
     switch(compGroup) {
         case 'knob':
@@ -1088,6 +1091,8 @@ $('.subLayerTab').click(function() {
         $('.subLayerTab.active').toggleClass('active');
         $(`#${id}`).toggleClass('active');
         currentSubLayer = id;
+        //reload leds
+        loadLeds();
     }
     switch(compGroup) {
         case 'knob':
@@ -1177,6 +1182,7 @@ function loadLedDetails() {
     let r = localData.comp[currentLayer][currentSubLayer][component].r;
     let g = localData.comp[currentLayer][currentSubLayer][component].g;
     let b = localData.comp[currentLayer][currentSubLayer][component].b;
+    const ledColor = component + 'Color';
     $('#detailContainer').append(`
         <div>Indicate: <spand id="indicate">${indicate}</spand></div>
         <button class="layerApplyBtns" id="layersIndBtn" type="button">Apply to all ${currentSubLayer} layers</button>
@@ -1216,6 +1222,9 @@ function loadLedDetails() {
         localData.comp[currentLayer][currentSubLayer][component].g = g;
         localData.comp[currentLayer][currentSubLayer][component].b = b;
         saveToLocal();
+        //edit color to led
+        $(`#${ledColor}`).css('fill-opacity', 1);
+        $(`#${ledColor}`).css('fill', `rgb(${r}, ${g}, ${b})`);
     });
     //when layerApplyBtns pressed
     $('.layerApplyBtns').click(function() {
@@ -1702,7 +1711,7 @@ function loadKnobDetails() {
 //when option is clicked
 function optionClicked() {
     $('.optionTile').click(function() {
-        const func = $(this).children().text();
+        const func = $(this).text();
         if(component) {
             switch(compGroup) {
                 case 'led':
@@ -1797,6 +1806,25 @@ function checkboxChanged() {
         }
         saveToLocal();
     });
+}
+
+//load led colors
+function loadLeds() {
+    const r0 = localData.comp[currentLayer][currentSubLayer].led0.r;
+    const g0 = localData.comp[currentLayer][currentSubLayer].led0.g;
+    const b0 = localData.comp[currentLayer][currentSubLayer].led0.b;
+    $('#led0Color').css('fill-opacity', 1);
+    $('#led0Color').css('fill', `rgb(${r0}, ${g0}, ${b0})`);
+    const r1 = localData.comp[currentLayer][currentSubLayer].led1.r;
+    const g1 = localData.comp[currentLayer][currentSubLayer].led1.g;
+    const b1 = localData.comp[currentLayer][currentSubLayer].led1.b;
+    $('#led1Color').css('fill-opacity', 1);
+    $('#led1Color').css('fill', `rgb(${r1}, ${g1}, ${b1})`);
+    const r2 = localData.comp[currentLayer][currentSubLayer].led2.r;
+    const g2 = localData.comp[currentLayer][currentSubLayer].led2.g;
+    const b2 = localData.comp[currentLayer][currentSubLayer].led2.b;
+    $('#led2Color').css('fill-opacity', 1);
+    $('#led2Color').css('fill', `rgb(${r2}, ${g2}, ${b2})`);
 }
 
 //save to localStorage
