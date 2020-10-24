@@ -1976,12 +1976,12 @@ bool subLayer = false;
 void layerChange(byte sign);
 void checkBit(byte layer, byte bit, byte led, uint32_t rgb);
 
-#define outputA A0
-#define outputB A2
+#define outputA A2
+#define outputB A0
 int counter = 0;
 int aState;
 int prevAState;
-const int pulseDebounce = 1;
+const int pulseDebounce = 0;
 unsigned long lastPulse = 0;
 int getEncoderDirection();
 #define encoderBtn 15
@@ -2007,8 +2007,8 @@ void setup() {
     strip.show();
     strip.setBrightness(15);
 
-    for(byte r=0; r<rowNum; r++) {
-    pinMode(rowPins[r], INPUT_PULLUP);
+    for(byte c=0; c<colNum; c++) {
+    pinMode(colPins[c], INPUT_PULLUP);
     }
 
     pinMode(outputA,INPUT_PULLUP);
@@ -2800,29 +2800,30 @@ void loop() {
 
 ///custom functions
 int getKey() {
-    int currKey=0;
+    int currKey = 0;
     pressCount = 0;
-    if((millis() - prevPressTimeKeypad) > matrixDebounce) {
-    prevPressTimeKeypad = millis();
-    for(byte c=0; c<colNum; c++) {
-        pinMode(colPins[c], OUTPUT);
-        digitalWrite(colPins[c], LOW);
-        for(byte r=0; r<rowNum; r++) {
-        if(digitalRead(rowPins[r]) == 0) {
+    if(millis() - prevPressTimeKeypad > matrixDebounce) {
+      for(byte r=0; r<rowNum; r++) {
+        pinMode(rowPins[r], OUTPUT);
+        digitalWrite(rowPins[r], LOW);
+        for(byte c=0; c<colNum; c++) {
+          //check if btn pressed is the same as last.
+          if(digitalRead(colPins[c]) == 0) {
             pressCount++;
-            if(pressCount == 1 && lastPressCount == 0) {
-            currKey = c+colNum*r+1;
-            break;
+            if(pressCount==1 && lastPressCount==0) {
+              currKey = c+colNum*r+1;
+              break;
             }
+          }
         }
-        }
-        digitalWrite(colPins[c], HIGH);
-        pinMode(colPins[c], INPUT);
-    }
-    lastPressCount = pressCount;
+        digitalWrite(rowPins[r], HIGH);
+        pinMode(rowPins[r], INPUT);
+      }
+      prevPressTimeKeypad = millis();
+      lastPressCount = pressCount;
     }
     return(currKey);
-}
+  }
 
 int getEncoderDirection() {
     int direction = 0;
