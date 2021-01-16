@@ -5,31 +5,31 @@ const initialData = {
                 'knob0': {
                     single: {
                         active: 'func',
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                        func: {value: 'Volume mute', ctrl: false, shift: false, alt: false, gui: false},
                         str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                         ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                     },
                     double: {
                         active: 'func',
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                        func: {value: 'Layer up', ctrl: false, shift: false, alt: false, gui: false},
                         str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                         ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                     },
                     long: {
                         active: 'func',
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                        func: {value: 'Layer down', ctrl: false, shift: false, alt: false, gui: false},
                         str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                         ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                     },
                     antiClk: {
                         active: 'func',
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                        func: {value: 'Volume down', ctrl: false, shift: false, alt: false, gui: false},
                         str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                         ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                     },
                     clkwise: {
                         active: 'func',
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                        func: {value: 'Volume up', ctrl: false, shift: false, alt: false, gui: false},
                         str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                         ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                     }
@@ -43,70 +43,70 @@ const initialData = {
                 },
                 'led1': {
                     indicate: 'bit1',
-                    keycode: "checkBit(0, 1, 1, color1);",
+                    keycode: "checkBit(layer, 1, 1, color1);",
                     r: 0,
                     g: 255,
                     b: 0,
                 },
                 'led2': {
                     indicate: 'bit0',
-                    keycode: "checkBit(0, 0, 2, color2);",
+                    keycode: "checkBit(layer, 0, 2, color2);",
                     r: 0,
                     g: 255,
                     b: 0,
                 },
                 'key1': {
-                    active: 'func',
+                    active: 'str',
                     func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                    str: {value: '1', ctrl: false, shift: false, alt: false, gui: false},
                     ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                 },
                 'key2': {
-                    active: 'func',
+                    active: 'str',
                     func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                    str: {value: '2', ctrl: false, shift: false, alt: false, gui: false},
                     ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                 },
                 'key3': {
-                    active: 'func',
+                    active: 'str',
                     func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                    str: {value: '3', ctrl: false, shift: false, alt: false, gui: false},
                     ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                 },
                 'key4': {
-                    active: 'func',
+                    active: 'str',
                     func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                    str: {value: '4', ctrl: false, shift: false, alt: false, gui: false},
                     ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                 },
                 'key5': {
-                    active: 'func',
+                    active: 'str',
                     func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                    str: {value: '5', ctrl: false, shift: false, alt: false, gui: false},
                     ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                 },
                 'key6': {
-                    active: 'func',
+                    active: 'str',
                     func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                    str: {value: '6', ctrl: false, shift: false, alt: false, gui: false},
                     ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                 },
                 'key7': {
-                    active: 'func',
+                    active: 'str',
                     func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                    str: {value: '7', ctrl: false, shift: false, alt: false, gui: false},
                     ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                 },
                 'key8': {
-                    active: 'func',
+                    active: 'str',
                     func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                    str: {value: '8', ctrl: false, shift: false, alt: false, gui: false},
                     ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                 },
                 'key9': {
-                    active: 'func',
+                    active: 'str',
                     func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                    str: {value: '9', ctrl: false, shift: false, alt: false, gui: false},
                     ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
                 },
             },
@@ -223,57 +223,57 @@ const initialData = {
         layer1: {
             main: {
                 'knob0': {
-                    single: {
-                        active: 'func', 
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    },
-                    double: {
-                        active: 'func',
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    },
-                    long: {
-                        active: 'func',
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    },
-                    antiClk: {
-                        active: 'func',
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    },
-                    clkwise: {
-                        active: 'func',
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    }
+                  single: {
+                      active: 'func',
+                      func: {value: 'Volume mute', ctrl: false, shift: false, alt: false, gui: false},
+                      str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                      ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                  },
+                  double: {
+                      active: 'func',
+                      func: {value: 'Layer up', ctrl: false, shift: false, alt: false, gui: false},
+                      str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                      ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                  },
+                  long: {
+                      active: 'func',
+                      func: {value: 'Layer down', ctrl: false, shift: false, alt: false, gui: false},
+                      str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                      ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                  },
+                  antiClk: {
+                      active: 'func',
+                      func: {value: 'Volume down', ctrl: false, shift: false, alt: false, gui: false},
+                      str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                      ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                  },
+                  clkwise: {
+                      active: 'func',
+                      func: {value: 'Volume up', ctrl: false, shift: false, alt: false, gui: false},
+                      str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                      ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                  }
                 },
                 'led0': {
-                    indicate: '',
-                    keycode: '',
-                    r: 255,
-                    g: 255,
-                    b: 255,
+                  indicate: 'caps lock',
+                  keycode: "if(BootKeyboard.getLeds() & LED_CAPS_LOCK) {strip.setPixelColor(0, color0);}",
+                  r: 255,
+                  g: 255,
+                  b: 0,
                 },
                 'led1': {
-                    indicate: '',
-                    keycode: '',
-                    r: 255,
+                    indicate: 'bit1',
+                    keycode: "checkBit(layer, 1, 1, color1);",
+                    r: 0,
                     g: 255,
-                    b: 255,
+                    b: 0,
                 },
                 'led2': {
-                    indicate: '',
-                    keycode: '',
-                    r: 255,
+                    indicate: 'bit0',
+                    keycode: "checkBit(layer, 0, 2, color2);",
+                    r: 0,
                     g: 255,
-                    b: 255,
+                    b: 0,
                 },
                 'key1': {
                     active: 'func',
@@ -443,57 +443,57 @@ const initialData = {
         layer2: {
             main: {
                 'knob0': {
-                    single: {
-                        active: 'func', 
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    },
-                    double: {
-                        active: 'func',
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    },
-                    long: {
-                        active: 'func',
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    },
-                    antiClk: {
-                        active: 'func',
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    },
-                    clkwise: {
-                        active: 'func',
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    }
+                  single: {
+                      active: 'func',
+                      func: {value: 'Volume mute', ctrl: false, shift: false, alt: false, gui: false},
+                      str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                      ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                  },
+                  double: {
+                      active: 'func',
+                      func: {value: 'Layer up', ctrl: false, shift: false, alt: false, gui: false},
+                      str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                      ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                  },
+                  long: {
+                      active: 'func',
+                      func: {value: 'Layer down', ctrl: false, shift: false, alt: false, gui: false},
+                      str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                      ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                  },
+                  antiClk: {
+                      active: 'func',
+                      func: {value: 'Volume down', ctrl: false, shift: false, alt: false, gui: false},
+                      str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                      ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                  },
+                  clkwise: {
+                      active: 'func',
+                      func: {value: 'Volume up', ctrl: false, shift: false, alt: false, gui: false},
+                      str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                      ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                  }
                 },
                 'led0': {
-                    indicate: '',
-                    keycode: '',
-                    r: 255,
-                    g: 255,
-                    b: 255,
+                  indicate: 'caps lock',
+                  keycode: "if(BootKeyboard.getLeds() & LED_CAPS_LOCK) {strip.setPixelColor(0, color0);}",
+                  r: 255,
+                  g: 255,
+                  b: 0,
                 },
                 'led1': {
-                    indicate: '',
-                    keycode: '',
-                    r: 255,
+                    indicate: 'bit1',
+                    keycode: "checkBit(layer, 1, 1, color1);",
+                    r: 0,
                     g: 255,
-                    b: 255,
+                    b: 0,
                 },
                 'led2': {
-                    indicate: '',
-                    keycode: '',
-                    r: 255,
+                    indicate: 'bit0',
+                    keycode: "checkBit(layer, 0, 2, color2);",
+                    r: 0,
                     g: 255,
-                    b: 255,
+                    b: 0,
                 },
                 'key1': {
                     active: 'func',
@@ -663,57 +663,57 @@ const initialData = {
         layer3: {
             main: {
                 'knob0': {
-                    single: {
-                        active: 'func', 
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    },
-                    double: {
-                        active: 'func',
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    },
-                    long: {
-                        active: 'func',
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    },
-                    antiClk: {
-                        active: 'func',
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    },
-                    clkwise: {
-                        active: 'func',
-                        func: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                        ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
-                    }
+                  single: {
+                      active: 'func',
+                      func: {value: 'Volume mute', ctrl: false, shift: false, alt: false, gui: false},
+                      str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                      ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                  },
+                  double: {
+                      active: 'func',
+                      func: {value: 'Layer up', ctrl: false, shift: false, alt: false, gui: false},
+                      str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                      ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                  },
+                  long: {
+                      active: 'func',
+                      func: {value: 'Layer down', ctrl: false, shift: false, alt: false, gui: false},
+                      str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                      ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                  },
+                  antiClk: {
+                      active: 'func',
+                      func: {value: 'Volume down', ctrl: false, shift: false, alt: false, gui: false},
+                      str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                      ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                  },
+                  clkwise: {
+                      active: 'func',
+                      func: {value: 'Volume up', ctrl: false, shift: false, alt: false, gui: false},
+                      str: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                      ln: {value: '', ctrl: false, shift: false, alt: false, gui: false},
+                  }
                 },
                 'led0': {
-                    indicate: '',
-                    keycode: '',
-                    r: 255,
-                    g: 255,
-                    b: 255,
+                  indicate: 'caps lock',
+                  keycode: "if(BootKeyboard.getLeds() & LED_CAPS_LOCK) {strip.setPixelColor(0, color0);}",
+                  r: 255,
+                  g: 255,
+                  b: 0,
                 },
                 'led1': {
-                    indicate: '',
-                    keycode: '',
-                    r: 255,
+                    indicate: 'bit1',
+                    keycode: "checkBit(layer, 1, 1, color1);",
+                    r: 0,
                     g: 255,
-                    b: 255,
+                    b: 0,
                 },
                 'led2': {
-                    indicate: '',
-                    keycode: '',
-                    r: 255,
+                    indicate: 'bit0',
+                    keycode: "checkBit(layer, 0, 2, color2);",
+                    r: 0,
                     g: 255,
-                    b: 255,
+                    b: 0,
                 },
                 'key1': {
                     active: 'func',
@@ -1194,6 +1194,16 @@ $('.components').click(function() {
             break;
     }
 });
+
+function randomID() {
+  let id = "";
+  let char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let idLen = 6;
+  for(let i=0; i<idLen; i++) {
+    id += char.charAt(Math.floor(Math.random()*char.length));
+  }
+  return id;
+}
 
 function loadTimeoutDetails() {
     $("#subLayerTabContainer").hide();
@@ -1821,10 +1831,10 @@ function createLedKeycode(func, layer) {
     let keycode;
     switch(func) {
         case 'bit0':
-            keycode = `checkBit(${layerIndex}, 0, ${ledIndex}, color${ledIndex});`;
+            keycode = `checkBit(layer, 0, ${ledIndex}, color${ledIndex});`;
             break;
         case 'bit1':
-            keycode = `checkBit(${layerIndex}, 1, ${ledIndex}, color${ledIndex});`;
+            keycode = `checkBit(layer, 1, ${ledIndex}, color${ledIndex});`;
             break;
         case 'caps lock':
             keycode = `if(BootKeyboard.getLeds() & LED_CAPS_LOCK) {strip.setPixelColor(${ledIndex}, color${ledIndex});}`;
@@ -1922,7 +1932,7 @@ $('.file').click(function() {
             break;
         case 'downloadIno':
             const ino = 'data:text/json;charset=utf-8,' + encodeURIComponent(createIno());
-            $('body').append(`<a id="downloadAnchor" href="${ino}" download="keypad.ino"></a>`);
+            $('body').append(`<a id="downloadAnchor" href="${ino}" download="keypad_${randomID()}.ino"></a>`);
             document.getElementById('downloadAnchor').click();
             $('#downloadAnchor').remove();
             break;
