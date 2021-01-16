@@ -18,6 +18,14 @@ svg {
     width: auto;
 }
 
+#timeout {
+    margin-left: 95px;
+}
+
+#timeoutDetail {
+    
+}
+
 #configure {
     display: flex;
     margin: auto 50px;
@@ -28,6 +36,7 @@ svg {
 }
 
 #detail {
+    width: 504px;
     margin-left: 20px;
     border: 2px black solid;
     border-radius: 6px;
@@ -59,7 +68,17 @@ svg {
     text-decoration-thickness: 2px;
     text-transform: uppercase;
     font-weight: 800;
-    font-size: 19.5px;
+    font-size: 19px;
+}
+
+#timeoutName {
+    margin: 10px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 19px;
 }
 
 .selected {
@@ -73,6 +92,10 @@ svg {
     margin: 0;
     align-items: center;
     justify-content: center;
+}
+
+.timeoutRadio {
+    margin-left: 40px;
 }
 
 .colorPicker {
