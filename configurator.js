@@ -1051,7 +1051,7 @@ if(!localData) {
 //create layers tab and load initial option
 let layerIndex = 0;
 for(layer in localData.comp) {
-    $('#layerTabContainer').append(`<span id="${layer}" class="layerTab ${(layerIndex==0)?'active':''}">Layer ${layerIndex}</span>`);
+    $('#layerTabContainer').append(`<span id="${layer}" class="layerTab ${(layerIndex==0)?'active':''}" style="${(layerIndex==0)?"border-top-left-radius: 20px;":""}">Layer ${layerIndex}</span>`);
     layerIndex++;
 }
 $('#layerTabContainer').append(`<span id="timeout" class="layerTab">Timeout</span>`);
@@ -1212,8 +1212,10 @@ function loadTimeoutDetails() {
     $("#timeoutDetail").remove();
     $("#detail").append(`<div id="timeoutDetail"></div>`);
     $("#timeoutDetail").append(`
-        <h3 id="timeoutName">Timeout Options</h3>
-        <input id="toggleTimeout" value="true" class="compoundCheckbox" type="checkbox" name="toggleTimeout" ${localData.timeout.toggled?"checked":""}>
+        <div style="border-bottom: 1px var(--mainBorder) solid;">
+          <h3 id="timeoutName">Timeout Options</h3>
+        </div>
+        <input id="toggleTimeout" value="true" class="compoundCheckbox" type="checkbox" name="toggleTimeout" ${localData.timeout.toggled?"checked":""} style="margin-top: 10px;">
         <label for="toggleTimeout">Toggle timeout after </label>
         <input type="number" id="timeoutSec" name="timeoutSec" min="1" value="${localData.timeout.seconds}">
         <label for="timeoutSec">seconds</label>
@@ -1271,12 +1273,14 @@ function loadLedDetails() {
     let b = localData.comp[currentLayer][currentSubLayer][component].b;
     const ledColor = component + 'Color';
     $('#detailContainer').append(`
+        <div id="ledDetail">
         <div>Indicate: <spand id="indicate">${indicate}</spand></div>
         <button class="layerApplyBtns" id="layersIndBtn" type="button">Apply to all ${currentSubLayer} layers</button>
-        <button class="layerApplyBtns" id="subLayersIndBtn" type="button">Apply to ${(currentSubLayer=='main')?"sub":"main"} layer</button>`
+        <button class="layerApplyBtns" id="subLayersIndBtn" type="button">Apply to ${(currentSubLayer=='main')?"sub":"main"} layer</button>
+        </div>`
     );
-    $('#detailContainer').append(`<div class="wrap"><div class="colorPicker"></div></div>`);
-    $('#detailContainer').append(`
+    $('#ledDetail').append(`<div class="wrap" style="margin: 10px 0;"><div class="colorPicker"></div></div>`);
+    $('#ledDetail').append(`
         <button class="layerApplyBtns" id="layersColorBtn" type="button">Apply color to all ${currentSubLayer} layers</button>
         <button class="layerApplyBtns" id="subLayersColorBtn" type="button">Apply color to ${(currentSubLayer=='main')?"sub":"main"} layer</button>`
     );

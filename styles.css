@@ -1,3 +1,15 @@
+:root {
+    --background: #e8e8e8;
+    --text: #424242;
+    --mainComp: #f4f4f2;
+    --mainBorder: #e4e4e4;
+    --tabs: #e8e8e8;
+    --tile: #e4e4e4;
+    /* --tileBorder: #e4e4e4; */
+    --button: #f0f0f0;
+    --btnBorder: #c2c2c2;
+}
+
 html, body {
     height: 100%;
     width: 100%;
@@ -5,6 +17,8 @@ html, body {
     font-size: 17px;
     font-family: 'Nunito';
     font-weight: 600;
+    background-color: var(--background);
+    color: var(--text);
 }
 
 body {
@@ -16,14 +30,40 @@ body {
 svg {
     height: 100%;
     width: auto;
+    stroke: #b4b4b4;
+}
+
+#pageHeader {
+    position: absolute;
+    margin-top: 35px;
+    margin-top: 45px;
+    margin-left: 48px;
+    margin-left: 73px;
+    color: #b4b4b4;
+}
+
+#pageHeader h1 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: bolder;
+    line-height: .8;
+}
+
+#keypadBody {
+    fill-opacity: 1;
+    fill: var(--mainComp);
+}
+
+#keyDetail {
+    padding-left: 5px;
+}
+
+#ledDetail {
+    padding-left: 5px;
 }
 
 #timeout {
-    margin-left: 95px;
-}
-
-#timeoutDetail {
-    
+    margin-left: 30px;
 }
 
 #configure {
@@ -38,17 +78,21 @@ svg {
 #detail {
     width: 504px;
     margin-left: 20px;
-    border: 2px black solid;
-    border-radius: 6px;
+    border: 2px var(--mainBorder) solid;
+    border-radius: 20px;
+    background-color: var(--mainComp);
 }
 
 #detailContainer {
+    width: 504px;
     padding-top: 36px;
     font-weight: 600;
 }
 
 .knobDetail {
+    margin-top: 2px;
     margin-bottom: 2px;
+    padding-left: 5px;
 }
 
 .components {
@@ -58,7 +102,7 @@ svg {
 #subLayerTabContainer {
     float: right;
     margin-top: 15px;
-    padding-left: 389px;
+    padding-left: 370px;
 }
 
 #name {
@@ -72,8 +116,8 @@ svg {
 }
 
 #timeoutName {
-    margin: 10px;
-    margin-bottom: 10px;
+    width: 504px;
+    margin: 7px;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-transform: uppercase;
@@ -81,9 +125,33 @@ svg {
     font-size: 19px;
 }
 
+#rgbValues {
+    margin-left: 60px;
+}
+
+#media {
+    border-top-left-radius: 15px;
+}
+
+#options {
+    width: 770px;
+    margin: auto;
+    margin-right: 60px;
+    border: 2px var(--mainBorder) solid;
+    border-radius: 15px;
+    background-color: var(--mainComp);
+}
+
+#optionContainer {
+    height: 700px;
+    margin-top: 5px;
+    border-bottom: 2px var(--mainBorder) solid;
+}
+
 .selected {
-    background-color: gainsboro;
-    border-radius: 4px;
+    height: 80%;
+    background-color: var(--tile);
+    border-radius: 10px;
 }
 
 .wrap {
@@ -102,58 +170,43 @@ svg {
     width: fit-content;
 }
 
-#rgbValues {
-    margin-left: 60px;
-}
-
-#options {
-    width: 770px;
-    margin: auto;
-    margin-right: 60px;
-    border: 2px black solid;
-    border-radius: 6px;
-}
-
 .tab {
     margin-top: 10px;
-    margin-left: -1px;
-    border-bottom: 1px black solid;
+    margin-left: -1.5px;
+    border-bottom: 1px var(--mainBorder) solid;
 }
 
 .tab > span {
-    padding: 10px;
+    padding: 10px 15px;
     padding-bottom: 0;
-    border: 1px black solid;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    background-color: rgb(228, 228, 228);
+    margin: 0 1.5px;
+    border: 1px var(--mainBorder) solid;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: var(--tabs);
     cursor: pointer;
 }
 
 span.active {
-    background-color: white;
-    border-bottom: 2px white solid;
-}
-
-#optionContainer {
-    height: 700px;
-    border-bottom: 2px black solid;
+    background-color: var(--mainComp);
+    border-bottom: 2px var(--mainComp) solid;
 }
 
 .optionTile {
     display: flex;
     float: left;
-    height: 50px;
+    height: 48px;
     min-width: 50px;
-    margin: 10px;
-    padding: 0 3px;
-    border: 2px rgb(65, 65, 65) solid;
+    margin: 9px;
+    padding: 0 10px;
+    border: 2px var(--tileBorder) solid;
     border-radius: 7px;
     word-break: break-word;
     text-align: center;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    background-color: var(--tile);
 }
 
 .optionTile > span {
@@ -178,10 +231,10 @@ input[type="file"] {
 }
 
 .fileBtn {
-    border: 1px solid rgb(194, 194, 194);
+    border: 1px solid var(--btnBorder);
     border-radius: 4px;
     padding: 1px 4px;
-    background-color: rgb(240, 240, 240);
+    background-color: var(--button);
     display: inline-block;
     cursor: pointer;
 }
@@ -205,14 +258,21 @@ button {
     font-weight: 600;
     border-radius: 4px;
     border-width: 1px;
-    border-color: rgb(240, 240, 240);
+    border-color: var(--button);
 }
 
 @media only screen and (max-width: 1900px) {
+    #pageHeader {
+        top: 750px;
+        margin: 30px;
+        transform: rotate(-90deg);
+    }
     #configure {
         margin: auto;
+        margin-top: 50px;
     }
     #options {
         margin: auto;
+        margin-top: 50px;
     }
 }
