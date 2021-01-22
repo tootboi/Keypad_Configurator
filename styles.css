@@ -36,17 +36,33 @@ svg {
 #pageHeader {
     position: absolute;
     margin-top: 35px;
-    margin-top: 45px;
-    margin-left: 48px;
+    margin-top: 35px;
+    margin-left: 50px;
     margin-left: 73px;
     color: #b4b4b4;
 }
 
 #pageHeader h1 {
     margin: 0;
-    font-size: 50px;
+    font-size: 55px;
     font-weight: bolder;
     line-height: .8;
+}
+
+#mainWrapper {
+    display: flex;
+    margin-top: 50px;
+}
+
+#configure {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 40px;
+    align-items: center;
+}
+
+#keypad {
+    height: 734px;
 }
 
 #keypadBody {
@@ -66,33 +82,25 @@ svg {
     margin-left: 30px;
 }
 
-#configure {
-    display: flex;
-    margin: auto 50px;
-}
-
-#keypad {
-    height: 670px;
-}
-
 #detail {
-    width: 504px;
-    margin-left: 20px;
+    height: 734px;
+    margin-left: 25px;
     border: 2px var(--mainBorder) solid;
     border-radius: 20px;
     background-color: var(--mainComp);
 }
 
 #detailContainer {
-    width: 504px;
-    padding-top: 36px;
+    width: 520px;
+    padding-top: 43px;
     font-weight: 600;
 }
 
 .knobDetail {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    padding-left: 5px;
+    margin: 2px;
+    padding-left: 8px;
+    padding-top: 3px;
+    padding-bottom: 6px;
 }
 
 .components {
@@ -134,16 +142,17 @@ svg {
 }
 
 #options {
-    width: 770px;
+    display: inline-table;
+    width: 740px;
+    height: 734px;
     margin: auto;
-    margin-right: 60px;
     border: 2px var(--mainBorder) solid;
     border-radius: 15px;
     background-color: var(--mainComp);
 }
 
 #optionContainer {
-    height: 700px;
+    height: 655px;
     margin-top: 5px;
     border-bottom: 2px var(--mainBorder) solid;
 }
@@ -151,7 +160,7 @@ svg {
 .selected {
     height: 80%;
     background-color: var(--tile);
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .wrap {
@@ -253,6 +262,7 @@ input[type="text"] {
 
 button {
     height: 23px;
+    margin-top: 5px;
     font-family: 'Nunito';
     font-size: 14px;
     font-weight: 600;
@@ -261,11 +271,15 @@ button {
     border-color: var(--button);
 }
 
-@media only screen and (max-width: 1900px) {
+@media only screen and (max-width: 1800px) {
     #pageHeader {
-        top: 750px;
-        margin: 30px;
-        transform: rotate(-90deg);
+        margin-top: 18px;
+    }
+    #pageHeader h1 {
+        font-size: 45px;
+    }
+    #mainWrapper {
+        display: grid;
     }
     #configure {
         margin: auto;
@@ -273,6 +287,6 @@ button {
     }
     #options {
         margin: auto;
-        margin-top: 50px;
+        margin-top: 30px;
     }
 }
