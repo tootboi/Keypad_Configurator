@@ -44,7 +44,7 @@ svg {
 
 #pageHeader h1 {
     margin: 0;
-    font-size: 55px;
+    font-size: 60px;
     font-weight: bolder;
     line-height: .8;
 }
@@ -111,6 +111,7 @@ svg {
     float: right;
     margin-top: 15px;
     padding-left: 370px;
+    padding-left: 385px;
 }
 
 #name {
@@ -124,7 +125,7 @@ svg {
 }
 
 #timeoutName {
-    width: 504px;
+    width: 507.5px;
     margin: 7px;
     text-decoration: underline;
     text-decoration-thickness: 2px;
@@ -143,6 +144,7 @@ svg {
 
 #options {
     display: inline-table;
+    position: relative;
     width: 740px;
     height: 734px;
     margin: auto;
@@ -152,9 +154,11 @@ svg {
 }
 
 #optionContainer {
-    height: 655px;
     margin-top: 5px;
-    border-bottom: 2px var(--mainBorder) solid;
+}
+
+#spacer {
+    height: 20px;
 }
 
 .selected {
@@ -190,8 +194,8 @@ svg {
     padding-bottom: 0;
     margin: 0 1.5px;
     border: 1px var(--mainBorder) solid;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     background-color: var(--tabs);
     cursor: pointer;
 }
@@ -228,7 +232,12 @@ span.active {
 }
 
 .fileContainer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 3px;
     padding: 5px;
+    border-top: 2px var(--mainBorder) solid;
 }
 
 input[type="file"] {
