@@ -1293,22 +1293,41 @@ function loadLedDetails() {
     });
     $('.wrap').append(
         `<div id="rgbValues">
-            R: ${r}<br>
-            G: ${g}<br>
-            B: ${b}
+            R: <input type="number" name="valueR" id="rValue" class="rgbInput" min="0" max="255" value="${r}"><br>
+            G: <input type="number" name="valueG" id="gValue" class="rgbInput" min="0" max="255" value="${g}"><br>
+            B: <input type="number" name="valueB" id="bValue" class="rgbInput" min="0" max="255" value="${b}">
         </div>`
     );
+    //when input rgb is changed
+    $(".rgbInput").on("input", function(e) {
+      let newVal = Number(e.target.value);
+      let color = this.id.slice(0,1);
+      //localData.comp[currentLayer][currentSubLayer][component][color] = newVal;
+      saveToLocal();
+      switch(color) {
+        case 'r':
+          r = newVal;
+          break;
+        case 'g':
+          g = newVal;
+          break;
+        case 'b':
+          b = newVal;
+          break;
+        
+        default:
+          break;
+      }
+      colorPicker.color.rgbString = `rgb(${r}, ${g}, ${b})`;
+    });
     //when color wheel changed
     colorPicker.on(["color:change"], function(color){
         r = color.red;
         g = color.green;
         b = color.blue;
-        $('#rgbValues').empty();
-        $('#rgbValues').html(
-            `R: ${r}<br>
-            G: ${g}<br>
-            B: ${b}`
-        );
+        $("#rValue").val(r);
+        $("#gValue").val(g);
+        $("#bValue").val(b);
         localData.comp[currentLayer][currentSubLayer][component].r = r;
         localData.comp[currentLayer][currentSubLayer][component].g = g;
         localData.comp[currentLayer][currentSubLayer][component].b = b;
