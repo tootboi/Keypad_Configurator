@@ -1396,7 +1396,7 @@ function loadKeyDetails() {
     $('#detailContainer').append(
         `<div id="keyDetail">
             <input type="radio" class="detailRadio" name="${component}" id="keyFuncOption" value="func" ${(keyActive=='func')?"checked":""}>
-            <label for="keyFuncOption">Funciton key: </label>
+            <label for="keyFuncOption">Function key: </label>
             <span id="funcKey">${keyFunc}</span>
             <input type="checkbox" class="compoundCheckbox func" id="ctrlFunc" name="ctrlFunc" value="ctrl" ${(compoundActiveFuncCtrl==true)?"checked":""}>
             <label for="ctrlFunc">Ctrl</label>
